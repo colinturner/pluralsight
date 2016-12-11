@@ -104,3 +104,28 @@ Truthy values in JS: any value that's not a falsy value. These cause an if-state
 JS is a loosely typed language.
 
 The === operator compares object referencs, not values. It asks, "do these two both point to the same object?" rather than "do these two have similar values?".
+
+###Common JavaScript Statements
+
+JS is a member of the C family, syntactically.
+By convention: all variables, parameters, members and function names start with lowerCase. --> exceptions: constructors start with UpperCase, and global variables are ALL-CAPS!
+Initial _ should be reserved for implementations.
+$ should be reserved for machines.
+
+Comments: // inline comments, or /* slashstar block comment */
+
+Division of two integers does not always produce an integer, and does not always produce the exact correct real-world result.
+
+% is the _remainder_ operator, not the _modulo_ operator. Remainder operator takes the sign of the first argument, rather than the second argument (that case would result in obtaining the modulo).
+
+Bitwise operators: "& | ^ >> >>> <<" converts the operand to a 32-bit signed intege, and turns the result back into a 64-bit floating point.
+
+Switch statement: is a multiway branch. The switch value can be either a number or a string. The case values can be expressions. Danger or switch statements is that cases fall through to the next case unless a disruptive statement (e.g. "break") ends the case.
+
+Throw statement: it generates (throws) an error. You can use this to create custom errors. Technically speaking, one "throws an exception".
+
+Catch statement: lets you handle the error.
+
+Try statement: lets you test a block of code for errors.
+
+Finally statement: lets you execute code, after try and catch, regardless of the result.
