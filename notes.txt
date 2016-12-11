@@ -11,5 +11,42 @@ Avoid confusing code: it's best to adopt practices that reduce ambiguity in the 
 go into debugging rather than the initial writing of the code. So write good code in the first place! Take the time for some extra
 keystrokes - it'll pay off in the maintenance portion of the software lifecycle.
 
+###JSLint
 JSLint is a tool Crockford developed to help spot typos and small errors (e.g. forgetting a semi-colon).
 
+
+##And Then There Was JavaScript
+
+JavaScript was written in 10 days! It also underwent a period of 10 YEARS (1999-2009) without a major update. ES3 --> ES5; ES4 was scrapped altogether.
+
+JS is an object-oriented language where almost everything is an object. Object literals are important. JS is a prototype-based language,
+rather than a class-based language. This means that we can create object prototypes and then create new objects (e.g. with the "new" constructor) that
+inherit properties from a given object prototype.
+
+###Numbers
+There is only one number-type in JS: 64-bit floating point, aka "Double".
+
+JS does not have "int" when defining numbers --> Good because ints cause arithmetic errors.
+
+Number literals: you can use decimal notation, scientific notation, etc.
+
+Associative Law does not always hold in JS because computer numbers are necessarily finite (due to bit limitations), whereas real-world numbers are not always finite.
+
+Associativity tends to hold in JS arithmetic for numbers under 9 quadrillion.
+
+Decimal fractions are approximate in JS. This is a problem with binary computing (not JS-specific). JS *should* have used a decimal, floating-point format.
+
+Number methods: numbers are objects, and so we can run methods on them (e.g. "toFixed", "toPrecision", "valueOf", "toExponential", "toLocaleString", "toString").
+You can even add your own Number Methods to the Number object (e.g. a truncation method).
+
+Numbers are first class objects!
+
+Math object: some of the math functions (e.g. "min", "max", "log", "ceil", "sin") are expensive (e.g. trig functions) and you don't always need them. It would be better for math functions and math constants (e.g. PI and E) to be Number Methods, but instead JS has them has methods on the _Math Object_.
+
+NaN: stands for "Not a Number", but has a type of "Number". Result of an undefined or erroneous operation. It's not equal to anything - not even itself! NaN === NaN is false.
+
+"=" as the assignment operator comes from Fortran. Inherited by JS.
+
+JS has infinity, which is a value that represents all values that are bigger than the greatest number that JS can represent.
+
+Number.MAX_Value is the biggest number that JS knows how to represent (around 9 quadrillion).
