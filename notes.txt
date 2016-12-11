@@ -50,3 +50,38 @@ NaN: stands for "Not a Number", but has a type of "Number". Result of an undefin
 JS has infinity, which is a value that represents all values that are bigger than the greatest number that JS can represent.
 
 Number.MAX_Value is the biggest number that JS knows how to represent (around 9 quadrillion).
+
+###Strings and Arrays
+
+Boolean: two values, true and false.
+
+Strings: basically means "text". Crockford doesn't know why they're called "strings".
+Strings are immutable --> once they are created, they cannot be modified. To "modify" them, you actually create a new string.
+Similar strings are equal (under "===").
+Good convention for strings: use double-quote for external strings and single-quote for internal strings and characters.
+
+"+" operator: + can concatenate or add.
+
+parseInt function: takes a string and a radix. e.g. parseInt(str, 10). It will stop parsing once it sees a character which is not a digit in the base that it's working in. e.g. parseInt("12em") === 12.
+
+There are problems with leading zeroes when using parseInt. e.g. parseInt("08") === 0. We defend against this by explicitly specifying the radix (usually 10). e.g. parseInt("08", 10) === 8.
+
+Strings have a length property. It tells you how many characters are in the string.
+
+Strings have lots of methods (they're objects, after all). e.g. "charAt", "split", "trim", "concat".
+
+Array: a linear sequence of memory which is divided into equal-sized buckets which can be indexed by number, which allows for a very fast way of retrieving variables from a set.
+
+^ JS doesn't have arrays like that ^. JS arrays are actually objects. Array _inherits_ from object in JS. Indexes are converted to strings and used as names for retrieving values. One advantage is that we don't need to provide a length or type when creating an array in JS.
+
+Arrays have a special length property. Array length is 1 larger than the highest integer subscript in the array. It allows us to use "for" loops on arrays.
+
+Dot notation should not be used with arrays. Use bracket notation with arrays, except when calling methods.
+
+Array methods: e.g. concat, every, filter, forEach, map, reduce, splice, some, unshift, etc.
+
+The "sort" array method by default sorts numbers as strings, which is usually bad.
+
+Delete operator: allows you to delete elements from an array, but leaves a hole in the array. It's better to use the "splice" method, which doesn't leave the hole - the splice method is _slow_ though.
+
+Appending things to the end of an array tends to be fast. Removing things from anywhere, except the end of an array, tends to be very slow.
