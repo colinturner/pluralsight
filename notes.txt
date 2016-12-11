@@ -129,3 +129,56 @@ Catch statement: lets you handle the error.
 Try statement: lets you test a block of code for errors.
 
 Finally statement: lets you execute code, after try and catch, regardless of the result.
+
+##Function the Ultimate
+
+###Background on Functions
+JS just has functions: this encompasses methods, classes, constructors and modules.
+
+Function expression: creates a function object.
+
+Function objects are first class: 1) can be passed as an argument to a function. 2) Can be returned from a function. 3) May be assigned to a variable. 3) May be stored in an object or array.
+Function objects inherit from Function.prototype.
+
+Every function has methods.
+
+A variable declared anywhere within a function is visible _everywhere_ within the function.
+
+Function statement: mandatory name. It's a short-hand for a var statement with a function value - e.g.:
+
+function foo() {} --> expands to --> var foo = function foo() {}; --> which further expands to --> var foo = undefined; foo = function foo() {};
+
+function expression vs. function statement: _if the first token in a statement is "function", then it is a function statement_.
+
+One limitation of function statements: they have to be declared at the top level --> they can't be declared in the middle of a block. This is because of hoisting.
+
+Scope: in JS, blocks don't have scope. Only functions have scope. Variables defined in a function are not visible outside that function.
+
+Declare all var's at the top of the function. Declare all functions before you call them.
+
+Return statement: you can either return an _expression_, or else you return _undefined_. Constructors have a default return value of _this_.
+
+Each function receives two psuedo parameters: _arguments_ and _this_.
+
+_arguments_: this is an array-like object that contains all of the arguments from the function invocation. It has a length property.
+
+_this_: it's a pseudo parameter that contains a reference to the object of invocation. It allows a method to know what object it is concerned with. It allows a single function object to service many objects. It is the key to prototypal inheritance.
+
+Invocation operator, "()" :  it binds the arguments.
+
+Four ways to call a function: Function form, Method form, Constructor form, Apply form.
+
+Method form: thisObject.methodName(arguments)
+
+Function form: functionObject(arguments)
+
+Constructor form: new FunctionValue(arguments)
+
+Apply form: functionObject.apply(thisObject, arguments) or functionObject.call(thisObject, argument...)
+
+_this_ refers to different things in the different forms of calling a function: function form --> _this_ is the global object or undefined. method form --> _this_ is the object. constructor form --> _this_ is the new object. apply fom --> _this_ is the argument.
+
+_this_ gives methods access to their objects.
+
+_this_ is bound at invocation time.
+
