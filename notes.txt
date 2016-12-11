@@ -182,3 +182,14 @@ _this_ gives methods access to their objects.
 
 _this_ is bound at invocation time.
 
+###Functions as Subroutines
+
+Functions in programming evolved from subroutines (a piece of code that could be called from multiple locations).
+
+Recursion: when a function calls itself. A function is defined in terms of itself.
+
+Closure: the context of an inner function includes the scope of the outer function.
+An inner function enjoys that context _even after the parent functions have returned_.
+Function scope works like block scope.
+
+Scope and Sets: inner functions have larger scope than outer functions.
