@@ -85,3 +85,22 @@ The "sort" array method by default sorts numbers as strings, which is usually ba
 Delete operator: allows you to delete elements from an array, but leaves a hole in the array. It's better to use the "splice" method, which doesn't leave the hole - the splice method is _slow_ though.
 
 Appending things to the end of an array tends to be fast. Removing things from anywhere, except the end of an array, tends to be very slow.
+
+###Objects
+Use objects when the names are arbitrary strings. Use arrays when the names are sequential integers.
+
+RegExp: pattern-matching function. RegExp notation is notoriously hard to read in JS.
+
+All values in JS are objects, except null and undefined. Null is a value that isn't anything - it's a blank space.
+Undefined is the default value for variables and parameters. It's the value of missing members in objects.
+
+typeof operator: returns the type of any object in JS. Note that passing an array to the typeof operator returns an object. Also the "typof(null)" is an object, which is just wrong.
+
+Array.isArray checks to see if an array is _actually_ an array (rather than just returning "object", like typeof would by itself).
+
+Falsy values in JS: false, null, undefined, "" (empty string), 0, NaN. These, as conditions, cause an if-statement to take the false-branch.
+Truthy values in JS: any value that's not a falsy value. These cause an if-statement to take the true-branch.
+
+JS is a loosely typed language.
+
+The === operator compares object referencs, not values. It asks, "do these two both point to the same object?" rather than "do these two have similar values?".
