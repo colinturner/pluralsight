@@ -2,7 +2,7 @@
 
 ##Introduction
 
-Compatibility with modern broswers: 85-96% (IE to Chrome).
+Compatibility with modern broswers: 85-96% (IE and Chrome, respectively).
 
 ES6 is backwards compatible with ES5.
 
